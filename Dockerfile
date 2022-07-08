@@ -16,7 +16,9 @@ USER ${USER}
 WORKDIR /home/evobot
 
 COPY --chown=${USER}:${USER} package*.json ./
+COPY --chown=${USER}:${USER} package.json ./
 RUN npm install
+RUN npm install discord.js
 # VOLUME [ "/home/evobot" ]
 
 COPY --chown=${USER}:${USER}  . .
