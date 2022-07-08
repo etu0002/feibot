@@ -14,8 +14,6 @@ services:
       - DB_PORT=${DB_PORT}
       - DB_NAME=${DB_NAME}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-    volumes:
-      - ./:/home/evobot
   lavalink:
     image: fredboat/lavalink:77a3bd81
     container_name: bot-lavalink
